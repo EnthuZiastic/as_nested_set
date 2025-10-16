@@ -58,5 +58,5 @@ defmodule AsNestedSet.Traversable do
   end
 
   defp check_callback_response({_node, _context} = ok, _), do: ok
-  defp check_callback_response(error, callback), do: raise ArgumentError, "Expect #{inspect callback} to return {AsNestedSet.t, context} but got #{inspect error}"
+  defp check_callback_response(error, callback), do: raise(ArgumentError, "Expect #{inspect callback} to return {AsNestedSet.t, context} but got #{inspect error}")
 end
